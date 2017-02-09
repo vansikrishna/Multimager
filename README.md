@@ -3,7 +3,7 @@ Multi Image Picker and Multi Image Capture Demo app
 This is a sample demonstration for multiple images capture as well as multiple image picker. UX/UI can be styled with any color with relativity to Material Design. The demo shows tinting multiple views based on theme color!!
 
 # Screenshots
-![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/3.png) ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/4.png) ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/5.png) ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/6.png)
+![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/3.png) ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/4.png) ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/5.png) ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/9.png) ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/6.png)
 
 # Create intent for multi-selection
 	Intent intent = new Intent(this, GalleryActivity.class);
