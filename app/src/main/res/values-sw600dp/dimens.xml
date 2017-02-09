@@ -1,0 +1,44 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">24dp</dimen>
+    <dimen name="activity_vertical_margin">24dp</dimen>
+    <dimen name="fab_margin">24dp</dimen>
+
+    <dimen name="image_height_portrait">240dp</dimen>
+    <dimen name="image_height_landscape">120dp</dimen>
+
+    <dimen name="thumbnail_width">160dp</dimen>
+    <dimen name="thumbnail_height">120dp</dimen>
+
+    <dimen name="text_size_12">14sp</dimen>
+    <dimen name="text_size_14">16sp</dimen>
+    <dimen name="text_size_15">17sp</dimen>
+    <dimen name="text_size_16">18sp</dimen>
+    <dimen name="text_size_18">20sp</dimen>
+    <dimen name="text_size_20">22sp</dimen>
+
+    <dimen name="margin_1">2dp</dimen>
+    <dimen name="margin_2">3dp</dimen>
+    <dimen name="margin_3">4dp</dimen>
+    <dimen name="margin_5">6dp</dimen>
+    <dimen name="margin_8">10dp</dimen>
+    <dimen name="margin_10">12dp</dimen>
+    <dimen name="margin_15">17dp</dimen>
+    <dimen name="margin_16">18dp</dimen>
+    <dimen name="margin_20">22dp</dimen>
+    <dimen name="margin_30">32dp</dimen>
+    <dimen name="margin_32">34dp</dimen>
+    <dimen name="margin_36">38dp</dimen>
+    <dimen name="margin_40">42dp</dimen>
+    <dimen name="margin_42">44dp</dimen>
+    <dimen name="margin_48">50dp</dimen>
+    <dimen name="margin_50">52dp</dimen>
+    <dimen name="margin_56">58dp</dimen>
+    <dimen name="margin_60">62dp</dimen>
+    <dimen name="margin_70">72dp</dimen>
+    <dimen name="margin_80">84dp</dimen>
+    <dimen name="margin_90">96dp</dimen>
+    <dimen name="margin_100">110dp</dimen>
+    <dimen name="margin_140">150dp</dimen>
+    <dimen name="margin_250">270dp</dimen>
+</resources>

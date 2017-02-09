@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/MultimagerTheme.AppBarOverlay">
+
+            <include layout="@layout/toolbar"></include>
+
+        </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:id="@+id/cameraLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBarLayout">
+
+                <SurfaceView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/surfaceView">
+                </SurfaceView>
+                <ImageButton
+                    android:id="@+id/doneAllButton"
+                    android:background="@drawable/action_button_bg"
+                    android:layout_width="@dimen/margin_56"
+                    android:layout_height="@dimen/margin_56"
+                    android:padding="@dimen/margin_10"
+                    android:src="@drawable/ic_done_all"
+                    android:scaleType="fitXY"
+                    android:elevation="@dimen/margin_8"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:layout_marginBottom="@dimen/margin_16"/>
+                <ImageButton
+                    android:id="@+id/captureButton"
+                    android:background="@drawable/action_button_bg"
+                    android:layout_width="@dimen/margin_56"
+                    android:layout_height="@dimen/margin_56"
+                    android:padding="@dimen/margin_10"
+                    android:src="@drawable/ic_camera"
+                    android:scaleType="fitXY"
+                    android:elevation="@dimen/margin_8"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/margin_16"/>
+            <ImageButton
+                android:id="@+id/flashButton"
+                android:background="@drawable/action_button_bg"
+                android:layout_width="@dimen/margin_56"
+                android:layout_height="@dimen/margin_56"
+                android:padding="@dimen/margin_10"
+                android:src="@drawable/ic_flash_on"
+                android:scaleType="fitXY"
+                android:elevation="@dimen/margin_8"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/previewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBarLayout"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/previewImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/optionsLayout"/>
+
+            <RelativeLayout
+                android:id="@+id/optionsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/doneButton"
+                    style="@style/AppButtonBorderlessColored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Done"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/retakeButton"
+                    style="@style/AppButtonBorderlessColored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Retake"
+                    android:textAllCaps="false"/>
+
+                <Button
+                    android:id="@+id/nextButton"
+                    style="@style/AppButtonBorderlessColored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Next"
+                    android:textAllCaps="false" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

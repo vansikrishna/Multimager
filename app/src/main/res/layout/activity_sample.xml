@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parentLayout"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:text="Multi-Imager"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/themeColor"/>
+        <TextView
+            android:id="@+id/github"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_10"
+            android:text="GitHub"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is a sample demonstration for multiple images capture as well as picker! \n\nAlso embedded is a simple way to tint multiple views based on theme color!!"
+        android:id="@+id/textView"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_15"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="@dimen/margin_1"
+            android:layout_height="wrap_content"
+            android:text="Multi Capture"
+            android:id="@+id/multiCaptureButton"
+            android:textAllCaps="true"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="@dimen/margin_1"
+            android:layout_height="wrap_content"
+            android:text="Multi Picker"
+            android:id="@+id/multiPickerButton"
+            android:textAllCaps="true"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/customThemeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Custom Theme"
+            android:textAllCaps="true"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_5"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_10"
+            android:src="@drawable/ic_phone_grey"
+            android:tint="@color/themeColor"/>
+        <TextView
+            android:id="@+id/contact_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Contact Us"
+            android:textAllCaps="true"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/themeColor"/>
+
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_5"
+            android:src="@drawable/ic_message_grey"
+            android:tint="@color/themeColor"/>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_5"
+        android:gravity="center"
+        android:scrollbars="vertical" />
+
+
+</LinearLayout>

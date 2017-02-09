@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ Copyright 2014 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/MultimagerTheme.AppBarOverlay">
+
+            <include layout="@layout/toolbar"></include>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/cameraLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBarLayout">
+
+            <com.vlk.multimager.views.AutoFitTextureView
+                android:id="@+id/texture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+
+            <ImageButton
+                android:id="@+id/doneAllButton"
+                android:layout_width="@dimen/margin_56"
+                android:layout_height="@dimen/margin_56"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_16"
+                android:background="@drawable/action_button_bg"
+                android:elevation="@dimen/margin_8"
+                android:padding="@dimen/margin_10"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_done_all" />
+
+            <ImageButton
+                android:id="@+id/captureButton"
+                android:layout_width="@dimen/margin_56"
+                android:layout_height="@dimen/margin_56"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:background="@drawable/action_button_bg"
+                android:elevation="@dimen/margin_8"
+                android:padding="@dimen/margin_10"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_camera" />
+
+            <ImageButton
+                android:id="@+id/flashButton"
+                android:layout_width="@dimen/margin_56"
+                android:layout_height="@dimen/margin_56"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:background="@drawable/action_button_bg"
+                android:elevation="@dimen/margin_8"
+                android:padding="@dimen/margin_10"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_flash_on" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/previewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBarLayout"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/previewImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/optionsLayout"/>
+
+            <RelativeLayout
+                android:id="@+id/optionsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                    android:id="@+id/doneButton"
+                    style="@style/AppButtonBorderlessColored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="Done"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/retakeButton"
+                    style="@style/AppButtonBorderlessColored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Retake"
+                    android:textAllCaps="false"/>
+
+                <Button
+                    android:id="@+id/nextButton"
+                    style="@style/AppButtonBorderlessColored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Next"
+                    android:textAllCaps="false" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
