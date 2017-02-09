@@ -115,7 +115,7 @@ public class Utils {
         }
     }
 
-    public static void setButtonColorStateList(View view, int normalColor, int darkenedColor) {
+    public static void setViewsColorStateList(View view, int normalColor, int darkenedColor) {
         int[][] states = new int[][] {new int[] { android.R.attr.state_enabled}, new int[] { android.R.attr.state_pressed}};
         int[] colors = new int[]{normalColor, darkenedColor};
         ColorStateList colorStateList = new ColorStateList(states, colors);
@@ -124,7 +124,7 @@ public class Utils {
         }
     }
 
-    public static void setButtonColorStateList(int normalColor, int darkenedColor, View... views) {
+    public static void setViewsColorStateList(int normalColor, int darkenedColor, View... views) {
         int[][] states = new int[][] {new int[] { android.R.attr.state_enabled}, new int[] { android.R.attr.state_pressed}};
         int[] colors = new int[]{normalColor, darkenedColor};
         ColorStateList colorStateList = new ColorStateList(states, colors);

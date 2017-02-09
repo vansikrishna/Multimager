@@ -187,7 +187,7 @@ public class GalleryActivity extends BaseActivity {
     }
 
     private void initiateMultiCapture(){
-        Intent intent = new Intent(this, CameraFragment.class);
+        Intent intent = new Intent(this, MultiCameraActivity.class);
         intent.putExtra(Constants.KEY_PARAMS, params);
         startActivityForResult(intent, Constants.TYPE_MULTI_CAPTURE);
     }

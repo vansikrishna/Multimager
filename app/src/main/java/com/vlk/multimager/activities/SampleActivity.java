@@ -114,7 +114,7 @@ public class SampleActivity extends BaseActivity {
         recyclerView.setAdapter(imageAdapter);
     }
 
-    @OnClick({R.id.multiCaptureButton, R.id.multiPickerButton, R.id.customThemeButton, R.id.call, R.id.message})
+    @OnClick({R.id.multiCaptureButton, R.id.multiPickerButton, R.id.customThemeButton, R.id.call, R.id.message, R.id.github})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.multiCaptureButton:
@@ -142,11 +142,11 @@ public class SampleActivity extends BaseActivity {
     }
 
     private void navigateToUrl() {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://Your URL")));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/vansikrishna/Multimager.git")));
     }
 
     private void sendMessage() {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", "+918106064137", null)));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", "+918106064137", "Hello, I am very much pleased with the Multimager sample app posted on Github. Thank you.")));
     }
 
     private void initiateCall() {
@@ -217,11 +217,11 @@ public class SampleActivity extends BaseActivity {
         this.selectedColor = selectedColor;
         this.darkenedColor = Utils.getDarkColor(selectedColor);
         Utils.showShortSnack(parentLayout, "New color selected" + Integer.toHexString(selectedColor));
-//        Utils.setButtonColorStateList(customThemeButton, selectedColor, darkenedColor);
-//        Utils.setButtonColorStateList(multiCaptureButton, selectedColor, darkenedColor);
-//        Utils.setButtonColorStateList(multiPickerButton, selectedColor, darkenedColor);
+//        Utils.setViewsColorStateList(customThemeButton, selectedColor, darkenedColor);
+//        Utils.setViewsColorStateList(multiCaptureButton, selectedColor, darkenedColor);
+//        Utils.setViewsColorStateList(multiPickerButton, selectedColor, darkenedColor);
 
-        Utils.setButtonColorStateList(selectedColor, darkenedColor,
+        Utils.setViewsColorStateList(selectedColor, darkenedColor,
                 customThemeButton,
                 multiCaptureButton,
                 multiPickerButton,
