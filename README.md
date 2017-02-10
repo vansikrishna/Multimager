@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/vansikrishna/Multimager.svg)](https://jitpack.io/#vansikrishna/Multimager)
+
 # Multimager
 Multi Image Picker and Multi Image Capture Demo app
 This is a sample demonstration for multiple images capture as well as multiple image picker. UX/UI can be styled with any color with relativity to Material Design. The demo shows tinting multiple views based on theme color!!
