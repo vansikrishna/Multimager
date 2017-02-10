@@ -4,17 +4,19 @@ This is a sample demonstration for multiple images capture as well as multiple i
 
 # Library
 Add the jitpack repo to your repositories section in root level build.gradle
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
 
 Add the dependencies to the app level build.gradle
-	dependencies {
-	        compile 'com.github.vansikrishna:Multimager:1.0.0'
-	}
+
+    dependencies {
+        compile 'com.github.vansikrishna:Multimager:1.0.0'
+    }
 
 # Screenshots
 ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/3.png) ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/4.png) ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/5.png) ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/9.png) ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/6.png)
