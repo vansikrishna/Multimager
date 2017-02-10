@@ -47,6 +47,23 @@ Add the dependencies to the app level build.gradle
 	intent.putExtra(Constants.KEY_PARAMS, params);
 	startActivityForResult(intent, Constants.TYPE_MULTI_CAPTURE);
 
+# Get the result in the `onActivityResult()` callback
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if (resultCode != RESULT_OK) {
+            return;
+        }
+        switch (requestCode) {
+            case Constants.TYPE_MULTI_CAPTURE:
+                ArrayList<Image> imagesList = intent.getParcelableArrayListExtra(Constants.KEY_BUNDLE_LIST);
+                break;
+            case Constants.TYPE_MULTI_PICKER:
+                ArrayList<Image> imagesList = intent.getParcelableArrayListExtra(Constants.KEY_BUNDLE_LIST);
+                break;
+        }
+    }
+
 # Default style
 The default style is green, but it can be modified with any set colors. One for normal state and another for pressed state.
 ```setViewsColorStateList()``` in Utils class will do the job.
