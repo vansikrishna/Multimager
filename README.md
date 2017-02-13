@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/vansikrishna/Multimager.svg)](https://jitpack.io/#vansikrishna/Multimager)
+[![](https://jitpack.io/v/vansikrishna/Multimager.svg)](https://jitpack.io/#vansikrishna/Multimager) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Multimager-orange.svg?style=flat-square)](https://android-arsenal.com/details/1/5241)
 
 # Multimager
 Multi Image Picker and Multi Image Capture Demo app
