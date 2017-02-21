@@ -17,7 +17,7 @@ Add the jitpack repo to your repositories section in root level build.gradle
 Add the dependencies to the app level build.gradle
 
     dependencies {
-        compile 'com.github.vansikrishna:Multimager:1.0.2'
+        compile 'com.github.vansikrishna:Multimager:1.0.3'
     }
 
 # Screenshots
