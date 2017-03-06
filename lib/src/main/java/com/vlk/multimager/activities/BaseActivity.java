@@ -10,10 +10,13 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 
+import com.crashlytics.android.Crashlytics;
 import com.vlk.multimager.views.CustomProgressDialog;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import io.fabric.sdk.android.Fabric;
 
 /**
  * Created by vansikrishna on 08/06/2016.
@@ -27,6 +30,7 @@ public class BaseActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
     }
 
     public void showProgressDialog(String message){

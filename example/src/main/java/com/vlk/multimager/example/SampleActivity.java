@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.crashlytics.android.Crashlytics;
 import com.flask.colorpicker.ColorPickerView;
 import com.flask.colorpicker.OnColorSelectedListener;
 import com.flask.colorpicker.builder.ColorPickerClickListener;
@@ -38,6 +39,7 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.fabric.sdk.android.Fabric;
 
 /**
  * Created by vansikrishna on 08/06/2016.
@@ -70,9 +72,18 @@ public class SampleActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sample);
+        Fabric.with(this, new Crashlytics());
         ButterKnife.bind(this);
         selectedColor = fetchAccentColor();
         darkenedColor = Utils.getDarkColor(selectedColor);
+        Utils.setViewsColorStateList(selectedColor, darkenedColor,
+                customThemeButton,
+                multiCaptureButton,
+                multiPickerButton,
+                callImageView,
+                messageImageView,
+                contactUsTextView,
+                appNameTextView);
     }
 
     private int fetchAccentColor() {

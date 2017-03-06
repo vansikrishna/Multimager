@@ -125,12 +125,15 @@ public class Utils {
     }
 
     public static void setViewsColorStateList(int normalColor, int darkenedColor, View... views) {
-        int[][] states = new int[][] {new int[] { android.R.attr.state_enabled}, new int[] { android.R.attr.state_pressed}};
+        int[][] states = new int[][] {new int[0] , new int[] { android.R.attr.state_pressed}};
         int[] colors = new int[]{normalColor, darkenedColor};
         ColorStateList colorStateList = new ColorStateList(states, colors);
         for (View view : views) {
             if(view instanceof AppCompatButton){
-                ((AppCompatButton)view).setSupportBackgroundTintList(colorStateList);
+                if(Build.VERSION.SDK_INT >= 21)
+                    ((AppCompatButton)view).setBackgroundTintList(colorStateList);
+                else
+                    ((AppCompatButton)view).setSupportBackgroundTintList(colorStateList);
             }
             if(view instanceof AppCompatImageView){
                 ((AppCompatImageView)view).setColorFilter(normalColor);
@@ -139,7 +142,6 @@ public class Utils {
                 ((AppCompatTextView)view).setTextColor(normalColor);
             }
         }
-
     }
 
     public static int getDarkColor(int color){
