@@ -1,15 +1,14 @@
 apply plugin: 'com.android.library'
-apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        minSdkVersion 17
+        minSdkVersion 15
         targetSdkVersion 23
-        versionCode 5
-        versionName "1.0.4"
+        versionCode 6
+        versionName "1.0.5"
     }
     buildTypes {
         release {
@@ -21,7 +20,6 @@ android {
 
 repositories {
     mavenCentral()
-    maven { url 'https://maven.fabric.io/public' }
 }
 
 dependencies {
@@ -31,7 +29,4 @@ dependencies {
     compile 'com.android.support:support-v13:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.android.support:support-annotations:24.2.1'
-    compile('com.crashlytics.sdk.android:crashlytics:2.6.6@aar') {
-        transitive = true;
-    }
 }
