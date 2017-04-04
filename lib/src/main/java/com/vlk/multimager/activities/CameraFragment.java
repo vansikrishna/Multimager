@@ -572,11 +572,26 @@ public class CameraFragment extends Fragment implements View.OnClickListener{
 
     private String getImageRealPathFromURI(Uri contentUri) {
         String realPath="";
-        String[] proj = { MediaStore.Images.Media.DATA };
-        Cursor cursor = getActivity().getContentResolver().query(contentUri, proj, null, null, null);
-        cursor.moveToFirst();
-        realPath = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA));
-        cursor.close();
+        Cursor cursor = null;
+        try {
+            String[] proj = {MediaStore.Images.Media.DATA};
+            cursor = getActivity().getContentResolver().query(contentUri, proj, null, null, null);
+            if(cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                realPath = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA));
+            }
+            else{
+                Log.e("Image Real Path", "Cursor count appearing to be zero");
+                realPath = "";
+            }
+        }
+        catch (Exception e){
+            Log.e("Image Real Path", "Exception fetching getImageRealPathFromURI() due to "+e.toString());
+            realPath = "";
+        }
+        finally {
+            cursor.close();
+        }
         return realPath;
     }
 
@@ -585,6 +600,7 @@ public class CameraFragment extends Fragment implements View.OnClickListener{
         ContentValues values = new ContentValues();
         values.put(MediaStore.Images.Media.TITLE, timeStamp + ".jpg");
         fileUri = getActivity().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
+        Log.e("File Uri Path", "Uri inserted into media store = "+fileUri);
         String path = getImageRealPathFromURI(fileUri);
         File file = new File(path);
         return file;
