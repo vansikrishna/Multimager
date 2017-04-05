@@ -582,11 +582,13 @@ public class CameraFragment extends Fragment implements View.OnClickListener{
             }
             else{
                 Log.e("Image Real Path", "Cursor count appearing to be zero");
+//                Toast.makeText(getActivity(), "Cursor count appearing to be zero", Toast.LENGTH_LONG).show();
                 realPath = "";
             }
         }
         catch (Exception e){
             Log.e("Image Real Path", "Exception fetching getImageRealPathFromURI() due to "+e.toString());
+//            Toast.makeText(getActivity(),"Exception fetching getImageRealPathFromURI() due to "+e.toString(), Toast.LENGTH_LONG).show();
             realPath = "";
         }
         finally {
@@ -601,6 +603,7 @@ public class CameraFragment extends Fragment implements View.OnClickListener{
         values.put(MediaStore.Images.Media.TITLE, timeStamp + ".jpg");
         fileUri = getActivity().getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
         Log.e("File Uri Path", "Uri inserted into media store = "+fileUri);
+//        Toast.makeText(getActivity(), "File uri = "+fileUri, Toast.LENGTH_LONG).show();
         String path = getImageRealPathFromURI(fileUri);
         File file = new File(path);
         return file;
