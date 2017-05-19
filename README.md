@@ -4,6 +4,9 @@
 Multi Image Picker and Multi Image Capture Demo app
 This is a sample demonstration for multiple images capture as well as multiple image picker. UX/UI can be styled with any color with relativity to Material Design. The demo shows tinting multiple views based on theme color!!
 
+# Demo App
+<a href='https://play.google.com/store/apps/details?id=com.vlk.multimager.example&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img style="width:240" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+
 # Library
 Add the jitpack repo to your repositories section in root level build.gradle
 
