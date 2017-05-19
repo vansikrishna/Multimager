@@ -22,9 +22,9 @@ Add the dependencies to the app level build.gradle
 
 # Screenshots
 ![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/demo.gif)
-![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/3 - small.png)
-![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/9 - small.png)
-![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/11 - small.png)
+![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/3%20-%20small.png)
+![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/9%20-%20small.png)
+![](https://github.com/vansikrishna/Multimager/blob/master/screenshots/11%20-%20small.png)
 
 # Create intent for multi-selection
 	Intent intent = new Intent(this, GalleryActivity.class);
