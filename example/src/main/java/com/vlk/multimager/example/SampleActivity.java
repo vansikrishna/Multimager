@@ -1,13 +1,10 @@
 package com.vlk.multimager.example;
 
-import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -18,7 +15,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.flask.colorpicker.ColorPickerView;
 import com.flask.colorpicker.OnColorSelectedListener;
@@ -124,7 +120,7 @@ public class SampleActivity extends BaseActivity {
         recyclerView.setAdapter(imageAdapter);
     }
 
-    @OnClick({R.id.multiCaptureButton, R.id.multiPickerButton, R.id.customThemeButton, R.id.call, R.id.message, R.id.github})
+    @OnClick({R.id.multiCaptureButton, R.id.multiPickerButton, R.id.customThemeButton, R.id.github})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.multiCaptureButton:
@@ -139,12 +135,6 @@ public class SampleActivity extends BaseActivity {
             case R.id.customThemeButton:
                 setCustomTheme();
                 break;
-            case R.id.call:
-                initiateCall();
-                break;
-            case R.id.message:
-                sendMessage();
-                break;
             case R.id.github:
                 navigateToUrl();
                 break;
@@ -153,47 +143,6 @@ public class SampleActivity extends BaseActivity {
 
     private void navigateToUrl() {
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/vansikrishna/Multimager.git")));
-    }
-
-    private void sendMessage() {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.fromParts("sms", "+918106064137", "Hello, I am very much pleased with the Multimager sample app posted on Github. Thank you.")));
-    }
-
-    private void initiateCall() {
-        if (hasCallPermission(this)) {
-            Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:" + "+918106064137"));
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
-                // here to request the missing permissions, and then overriding
-                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                //                                          int[] grantResults)
-                // to handle the case where the user grants the permission. See the documentation
-                // for ActivityCompat#requestPermissions for more details.
-                return;
-            }
-            startActivity(intent);
-        }
-        else
-            requestCallPermissions(this, Constants.REQUEST_CALL_PERMS);
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        switch (requestCode) {
-            case Constants.REQUEST_CALL_PERMS:
-                if (validateGrantedPermissions(grantResults)) {
-                    initiateCall();
-                } else {
-                    Toast.makeText(this, "Permissions not granted.", Toast.LENGTH_LONG).show();
-                }
-                break;
-            default: {
-                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-            }
-        }
     }
 
     private void setCustomTheme() {
